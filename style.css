@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(215deg, #0454aa 0%, #4d89f2 74%);
+  font-size: 20px;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+input::placeholder {
+  color: #ddd;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  padding: 10px;
+  margin-left: 20px;
+  color: rgb(125, 125, 125);
+  font-weight: bold;
+  background: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  background-color: black;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.wrapper {
+  width: 800px;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 25px;
+  box-shadow: 0px 0px 70px black;
+}
+
+.top {
+  height: 260px;
+}
+
+.bottom {
+  height: 140px;
+}
+
+.main-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+}
+
+.city-name {
+  font-size: 40px;
+  text-transform: capitalize;
+  position: relative;
+  top: 15px;
+}
+
+.headings,
+.weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.headings p,
+.weather-info p {
+  width: 33.3%;
+  text-align: center;
+}
+
+.headings {
+  height: 35%;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.weather-info {
+  height: 65%;
+  font-size: 26px;
+}
+
+.photo {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  display: none;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.warning {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: tomato;
+}
+
+.weather,
+.temperature,
+.humidity {
+  z-index: 1;
+  font-weight: lighter;
+}
+
+.hideContent {
+  position: absolute;
+  width: 700px;
+  height: 40px;
+  background-image: linear-gradient(215deg, #0454aa 0%, #4d89f2 74%);
+  filter: blur(90px);
+}
+
+@keyframes slideIn {
+  from {
+    font-size: 0px;
+    top: 0px;
+  }
+  to {
+    font-size: 40px;
+    top: 15px;
+  }
+}
+
+.slideIn {
+  animation: slideIn 0.5s forwards;
+  position: relative;
+}
