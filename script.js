@@ -10,7 +10,7 @@ const APIKEY = "bf52e8f3ee09cd6800fcdafde16155a5";
 const body = document.querySelector("body");
 const getWeatherData = () => {
   const getGeoCoordinates = () => {
-    const geocodingAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${input.value}&limit=1&appid=${APIKEY}`;
+    const geocodingAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${input.value}&limit=1&appid=${APIKEY}`;
     fetch(geocodingAPI)
       .then((response) => response.json())
       .then((data) => {
