@@ -73,3 +73,9 @@ const enterCheck = (e) => {
   }
 };
 input.addEventListener("keyup", enterCheck);
+
+const loadInfo = () => {
+  console.log("JavaScript file has loaded");
+};
+
+loadInfo();
